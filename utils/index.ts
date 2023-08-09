@@ -1,6 +1,8 @@
 export async function fetchCars() {
+  const apiKey = process.env.API_KEY;
+
   const headers = {
-    'X-RapidAPI-Key': 'dc9db1b44cmshfe6839673e6ee04p15733djsn790a9ef56723',
+    'X-RapidAPI-Key': apiKey || '',
     'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com',
   };
   const response = await fetch(
